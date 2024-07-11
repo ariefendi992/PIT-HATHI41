@@ -54,14 +54,6 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const banner = document.querySelector(".banner__wrapper");
-
-Array.from(banner.children).forEach((item) => {
-  const duplicateNode = item.cloneNode(true);
-  duplicateNode.setAttribute("aria-hidden", true);
-  banner.appendChild(duplicateNode);
-});
-
 AOS.init();
 const officialCards = document.querySelectorAll(".official__card");
 const fieldTripCards = document.querySelectorAll(".fieldtrip__card");
@@ -132,6 +124,22 @@ window.addEventListener("scroll", (event) => {
   }
 });
 
+const tabs = document.querySelectorAll(".tab__btn");
+const allCardContent = document.querySelectorAll(".card__content");
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", (e) => {
+    tabs.forEach((tab) => {
+      tab.classList.remove("active");
+    });
+    tab.classList.add("active");
+
+    allCardContent.forEach((content) => {
+      content.classList.remove("active");
+    });
+    allCardContent[index].classList.add("active");
+  });
+});
 // const scrollRevealOption = {
 //   distance: "30px",
 //   origin: "top",

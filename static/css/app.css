@@ -87,6 +87,33 @@
     background-color: var(--primary-color-light);
 }
 
+.btn-rounded {
+    position: absolute;
+    left: 50%;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--primary-color);
+    font-size: 1rem;
+    font-family: var(--header-font);
+    letter-spacing: 1px;
+    box-shadow: 2px 4px 10px var(--text-light), 0px 4px 10px var(--white);
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.btn-rounded:hover {
+    background-color: var(--primary-color-light);
+    color: var(--text-dark);
+}
+
 img {
     display: flex;
     width: 100%;
@@ -432,6 +459,13 @@ nav {
 .official__ratings span:last-child {
     color: var(--text-light);
 }
+
+.official__button {
+    margin-top: 2.5rem;
+}
+
+
+
 /* END OFFICIAL CONTAINER */
 
 /* FIELDTRIP CONTAINER */
@@ -684,6 +718,7 @@ nav {
 /* FOOTER */
 .footer {
     background-color: var(--extra-light);
+    margin-top: 2.5rem;
 }
 
 .footer__container {
@@ -1044,6 +1079,11 @@ nav {
 
     .footer__container {
         grid-template-columns: repeat(4,1fr);
+    }
+
+
+    .hotel__container .card__content{
+        justify-content: start;
     }
 }
 
